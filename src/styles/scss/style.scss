@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  background-color: #fccc05;
+  body {
+    background-color: transparent;
+  }
+}
+#__next {
+  background-color: #fccc05;
+}
+nav {
+  background-color: #fccc05;
+  a {
+    color: #405794;
+  }
+  z-index: 1;
+}
+
+.poke-list {
+  gap: 1em;
+  .poke-list-item {
+    flex: calc(25% - 1em) 0;
+    gap: 1em;
+    align-content: space-between;
+    border-radius: 15px;
+    img {
+      border-radius: 15px;
+    }
+    > div {
+      display: flex;
+      > div {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        align-items: start;
+      }
+    }
+    span {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15px;
+      color: white;
+      padding: 5px 25px;
+      border-radius: 15px;
+      background-color: #000000cd;
+      &.fire {
+        background-color: #ff3737;
+      }
+      &.metal {
+        background-color: #405794;
+      }
+    }
+  }
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #405794;
+    small {
+      font-size: inherit;
+      color: #fff;
+      margin-right: 5px;
+    }
+  }
+  h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #000;
+    font-size: 20px;
+  }
+  @media (max-width: 1153px) {
+    .poke-list-item {
+      flex: calc(50% - 1em) 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .poke-list-item {
+      flex: 100%;
+    }
+  }
+}
+
+.banner {
+  h1 {
+    color: #405794;
+    font-size: 80px;
+    padding-right: 30%;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1;
+  }
+  p {
+    color: #ff3737;
+    font-size: 20px;
+    padding-right: 30%;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1;
+  }
+  button {
+    background-color: #405794;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 30px;
+    width: 200px;
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      margin-top: -80px;
+      font-size: 43px;
+    }
+    > div {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      > div {
+        flex: 100%;
+      }
+    }
+  }
+}
+.search-pokemon-wrapper {
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.search-pokemon-wrapper .group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.search-pokemon-wrapper .input {
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+  margin-right: 10px;
+}
+
+.search-pokemon-wrapper .input::placeholder {
+  color: #9e9ea7;
+}
+
+.search-pokemon-wrapper .input:focus,
+.search-pokemon-wrapper input:hover {
+  outline: none;
+  border-color: rgba(234, 76, 137, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.search-pokemon-wrapper .icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+.search-pokemon-wrapper input {
+  border-radius: 40px;
+  border: 1px solid #dee1e0;
+  padding: 13px 10px;
+  background-color: #fff;
+  font-family: Arial;
+  text-indent: 10px;
+}
+
+.search-pokemon-wrapper input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #d0d0d0;
+  opacity: 1; /* Firefox */
+  font-family: PoppinsRegular;
+}
+
+.search-pokemon-wrapper input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d0d0d0;
+  font-family: PoppinsRegular;
+}
+
+.search-pokemon-wrapper input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #d0d0d0;
+  font-family: PoppinsRegular;
+}
+
+.modern-modal-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000a1;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  animation: fadein 0.2s;
+  -moz-animation: fadein 0.2s; /* Firefox */
+  -webkit-animation: fadein 0.2s; /* Safari and Chrome */
+  -o-animation: fadein 0.2s; /* Opera */
+}
+
+.modern-modal-wrapper .modern-modal-body {
+  color: #405794;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 70vw;
+  padding: 10px;
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .modern-modal-wrapper {
+    place-items: inherit;
+  }
+  .modern-modal-wrapper .modern-modal-body {
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+  }
+
+  .modern-modal-wrapper .modern-modal-body {
+    ul {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      li {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.filter-wrapper ul {
+  padding: 0px;
+  list-style: none;
+  color: #182327;
+  font-family: Arial;
+  margin-bottom: 40px;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+.filter-wrapper ul li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  gap: 0.5em;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+
+  &:hover {
+    background-color: #eaeaea;
+    border: 1px solid #c5c5c5;
+  }
+}
+
+.filter-wrapper ul li label {
+  margin-bottom: 0px;
+}
+
+.filter-wrapper ul li input {
+  margin-top: 4px;
+}
+
+.f-btn {
+  display: grid;
+  place-items: center;
+  display: inline-flex;
+
+  &:hover {
+    color: #fff;
+    background-color: #405794 !important;
+    path {
+      stroke: #fff;
+    }
+  }
+  span {
+    background-color: #ff3737;
+    color: #fff;
+    border-radius: 30px;
+    display: block;
+    width: 30px;
+    font-family: Arial;
+  }
+}
+
+/* The container */
+.c-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.c-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.c-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.c-container input:checked ~ .checkmark {
+  background-color: #405794;
+  border-radius: 5px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.c-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.c-container .checkmark:after {
+  left: 10px;
+  top: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
